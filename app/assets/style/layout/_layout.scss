@@ -1,0 +1,108 @@
+// header
+.header {
+    background: $primary-light;
+    h1 a {
+        @include logo("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/logo-white.png", 80px, 50px);
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            color: $white;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        .header-content {
+            flex-direction: column;
+        }
+        .menu {
+            width: 100%;
+            li {
+                width: 50%;
+                text-align: center;
+                a {
+                    border: 1px solid $white;
+                    &:hover {
+                        background: pink;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: $primary-light;
+    color: $white;
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $white;
+    }
+    &-contact {
+        .material-symbols-outlined {
+            font-size: inherit;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-menu {
+        display: flex;
+    }
+    &-media {
+        display: flex;
+        column-gap: 2rem;
+    }
+    &-term {
+        display: flex;
+        justify-content: space-between;
+        .footer-term-privacy {
+            display: flex;
+            a:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.footer {
+    @include pad {
+        &-media {
+            column-gap: 1rem;
+        }
+    }
+    @include mobile {
+        &-menu {
+            display: none;
+        }
+        &-contact {
+            font-size: 16px;
+            .material-symbols-outlined {
+                font-size: inherit;
+            }
+        }
+        &-media {
+            column-gap: 0.5rem;
+            img {
+                width: 24px;
+            }
+        }
+        &-term {
+            flex-direction: column;
+            align-items: flex-start;
+            .footer-term-privacy {
+                display: block;
+            }
+        }
+    }
+}

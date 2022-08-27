@@ -1,0 +1,74 @@
+.banner {
+    position: relative;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png");
+    height: 787px;
+    background-size: cover;
+
+    &-slogan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+
+        h3 {
+            color: $primary-dark;
+        }
+
+        h2 {
+            color: $primary-dark;
+        }
+
+        a {
+            color: $white;
+            background: $primary-light;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+}
+
+@include mobile() {
+    .banner {
+        height: 396px;
+    }
+}
+
+
+.subslogan {
+    color: $primary-dark;
+    background-color: $secondary;
+
+    .list {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 23%;
+
+            p:last-child {
+                color: $black;
+            }
+        }
+    }
+}
+
+@include pad() {
+    .subslogan {
+        .list {
+            &-item {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .subslogan {
+        .list {
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+}

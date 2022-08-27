@@ -1,0 +1,110 @@
+@mixin generate($pro, $side, $spaceValue) {
+    @if $side =='' {
+        @if $pro =='m' {
+            margin: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding: $spaceValue ;
+        }
+    }
+
+    @if $side =='t' {
+        @if $pro =='m' {
+            margin-top: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-top: $spaceValue ;
+        }
+    }
+
+    @if $side =='b' {
+        @if $pro =='m' {
+            margin-bottom: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-bottom: $spaceValue ;
+        }
+    }
+
+    @if $side =='l' {
+        @if $pro =='m' {
+            margin-left: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-left: $spaceValue ;
+        }
+    }
+
+    @if $side =='r' {
+        @if $pro =='m' {
+            margin-right: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-right: $spaceValue ;
+        }
+    }
+
+    @if $side =='x' {
+        @if $pro =='m' {
+            margin-left: $spaceValue ;
+            margin-right: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-left: $spaceValue ;
+            padding-right: $spaceValue ;
+        }
+    }
+
+    @if $side =='y' {
+        @if $pro =='m' {
+            margin-top: $spaceValue ;
+            margin-bottom: $spaceValue ;
+        }
+
+        @if $pro =='p' {
+            padding-top: $spaceValue ;
+            padding-bottom: $spaceValue ;
+        }
+    }
+}
+
+@mixin desktop {
+    @media(max-width:1320px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width:992px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:767px) {
+        @content;
+    }
+}
+
+@mixin logo($url, $width, $height) {
+    display: block;
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-size: cover;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

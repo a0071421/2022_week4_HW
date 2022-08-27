@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+      Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+
+    @include pad() {
+      max-width: 720px;
+    }
+
+    @include mobile() {
+      max-width: 100%;
+    }
+}
+
+.container-fluid {
+    @include mobile() {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+    }
+}
