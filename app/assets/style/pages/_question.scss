@@ -1,0 +1,11 @@
+.question {
+    h2 {
+        border-left: 8px solid $primary-light;
+    }
+    ul {
+        width: 60%;
+        @include pad() {
+            width: 100%;
+        }
+    }
+}
