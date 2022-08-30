@@ -1,0 +1,48 @@
+.form {
+    width: 50%;
+    margin: 0 auto;
+    &-control {
+        margin-top: 16px;
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            padding: 6px 0px 6px 12px;
+            width: 100%;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+        input[type="checkbox"] + label {
+            display: inline;
+            margin-bottom: 0px;
+        }
+        textarea {
+            resize: none;
+        }
+    }
+    &-button {
+        margin-top: 48px;
+        @include align-center();
+        a {
+            color: $white;
+            text-align: center;
+            background-color: $primary-light;
+            font-weight: map-get($fontWeights, 700);
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 176px;
+            padding-right: 176px;
+            &:hover {
+                opacity: 0.7;
+            }
+            @include mobile() {
+                width: 100%;
+            }
+        }
+    }
+    @include pad() {
+        width: 100%;
+    }
+}

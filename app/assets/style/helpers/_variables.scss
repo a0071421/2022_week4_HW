@@ -11,7 +11,8 @@ $spacies: (
   '10': 2.5rem, // 40px
   '12': 3rem, // 48px
   '16': 4rem, // 64px
-  '20': 5em, // 80px
+  '20': 5rem, // 80px
+  '44': 11rem, // 176px
   'auto': auto,
 );
 
@@ -52,3 +53,15 @@ $white:#FFFFFF;
 $primary-light:#AA0601;
 $primary-dark:#650300;
 $secondary:#FBF2F2;
+$gray: #707070;
+$pink: #FBF2F2;
+
+$theme-colors: (
+  "primary-dark": $primary-dark,
+  "primary-light": $primary-light,
+  "secondary":  $secondary,
+  "black": $black,
+  "white": $white,
+  "gray": $gray,
+  "pink": $pink
+);

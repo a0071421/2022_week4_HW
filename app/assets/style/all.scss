@@ -5,8 +5,11 @@
 @import "./mixin/mixin";
 @import "./base/base";
 
+@import "./component/card";
+@import "./component/form";
 @import "./utilities/spacing";
 @import "./utilities//fonts";
+@import "./utilities/theme";
 @import "./utilities/utilities";
 @import "./layout/layout";
 @import "./pages/index";

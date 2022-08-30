@@ -1,12 +1,4 @@
 @each $key, $value in $grid-breakpoints {
-  @each $fontKey, $value in $fonts {
-    .font-#{$fontKey} {
-      font-size: $value;
-    }
-  }
-}
-
-@each $key, $value in $grid-breakpoints {
   @if not $value {
     @each $fontKey, $value in $fonts {
       .font-#{$fontKey} {

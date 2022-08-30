@@ -10,18 +10,7 @@
         justify-content: center;
         align-items: flex-end;
         height: 100%;
-
-        h3 {
-            color: $primary-dark;
-        }
-
-        h2 {
-            color: $primary-dark;
-        }
-
         a {
-            color: $white;
-            background: $primary-light;
             padding-top: 6px;
             padding-bottom: 6px;
         }
@@ -36,19 +25,12 @@
 
 
 .subslogan {
-    color: $primary-dark;
-    background-color: $secondary;
-
     .list {
         &-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 23%;
-
-            p:last-child {
-                color: $black;
-            }
         }
     }
 }
@@ -72,3 +54,44 @@
         }
     }
 }
+
+.classical {
+    ul li {
+        width: 31.33%;
+        @include pad() {
+            width: 100%;
+        }
+    }
+}
+
+.design {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg.png");
+    height: 608px;
+    background-size: cover;
+    ul li {
+        width: 50%;
+    }
+}
+
+@include pad() {
+    .design {
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg-md.png");
+        height: 960px;
+        ul li {
+            width: 100%;
+        }
+    }
+}
+
+.recommand {
+    ul li {
+        width: 23%;
+        @include pad() {
+            width: 48%;
+        }
+        @include mobile() {
+            width: 100%;
+        }
+    }
+}
+
